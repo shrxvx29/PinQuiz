@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pirate Treasure Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="grid-overlay"></div>
+
+    <main class="shell">
+      <header class="top-bar">
+        <div class="system-title">
+          <span class="dot"></span>
+          <span>PIRATE TREASURE PROTOCOL</span>
+        </div>
+        <div class="access-level">
+          <div class="label-row">
+            <span>ACCESS LEVEL</span>
+            <span id="access-percent">0%</span>
+          </div>
+          <div class="access-bar">
+            <div class="access-bar-fill" id="access-bar-fill"></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="center-stage" id="startup-screen">
+        <div class="lock-panel glass">
+          <div class="lock-status">SECRET TREASURE CHARTED</div>
+          <button class="primary-btn" id="start-btn">
+            <span>Start Challenge</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="center-stage hidden" id="scan-screen">
+        <div class="scan-panel glass">
+          <div class="scan-header">VOYAGE LOG INITIALIZING</div>
+          <div class="scan-loader">
+            <div class="scan-bar">
+              <div class="scan-fill" id="scan-fill"></div>
+            </div>
+            <div class="scan-logs" id="scan-logs"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="center-stage hidden" id="quiz-screen">
+        <div class="quiz-card glass">
+          <div class="quiz-meta">
+            <span id="question-counter">Question 1 / 5</span>
+            <span class="chip" id="question-type">MULTIPLE CHOICE</span>
+          </div>
+          <div class="quiz-body">
+            <div class="question-text" id="question-text"></div>
+            <div class="question-extra" id="question-extra"></div>
+            <div class="answers" id="answers"></div>
+          </div>
+          <div class="quiz-footer">
+            <div class="hint" id="hint"></div>
+          </div>
+          <div class="unlock-pulse" id="unlock-pulse"></div>
+          <div class="glitch-overlay" id="glitch-overlay"></div>
+        </div>
+      </section>
+
+      <section class="center-stage hidden" id="final-screen">
+        <div class="treasure-panel glass">
+          <div class="trunk-scene">
+            <div class="chest">
+              <div class="chest-lid">
+                <div class="chest-wood-grain"></div>
+                <div class="chest-band top"></div>
+              </div>
+              <div class="chest-base">
+                <div class="chest-wood-grain"></div>
+                <div class="chest-band front"></div>
+                <div class="chest-lock">
+                  <div class="lock-ring"></div>
+                  <div class="lock-plate"></div>
+                </div>
+              </div>
+            </div>
+            <div class="letter">
+              <div class="letter-inner">
+                <div class="letter-heading">OLD DAMAGED LETTER</div>
+                <p class="letter-body">
+                  The tide has carried this worn note across many storms.
+                  Hidden within its faded ink lies your password.
+                </p>
+                <div class="letter-key">
+                  PASSWORD:
+                  <span>0603</span>
+                </div>
+                <p class="letter-note">
+                  Guard this code well, captain. It unlocks the next surprise.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
